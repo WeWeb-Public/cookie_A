@@ -1,6 +1,7 @@
 {
-  "name": "feature_D",
+  "name": "cookie_A",
   "version": "0.1.0",
+  "type": "section",
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.config.js -p",
