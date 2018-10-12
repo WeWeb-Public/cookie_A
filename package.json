@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.config.js -p",
-    "serve": "webpack-dev-server -d --inline"
+    "serve": "webpack-dev-server -d --inline",
+    "upload": "weweb-upload"
   },
   "dependencies": {
     "vue": "^2.5.16"
