@@ -1,33 +1,33 @@
 {
-  "name": "cookie_A",
-  "version": "0.1.0",
-  "type": "section",
-  "private": true,
-  "scripts": {
-    "build": "webpack --config webpack.config.js -p",
-    "serve": "webpack-dev-server -d --inline",
-    "upload": "weweb-upload"
-  },
-  "dependencies": {
-    "vue": "^2.5.16"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-beta.15",
-    "@vue/cli-plugin-eslint": "^3.0.0-beta.15",
-    "@vue/cli-service": "^3.0.0-beta.15",
-    "babel-loader": "^7.1.4",
-    "css-loader": "^0.28.11",
-    "vue-loader": "^15.2.2",
-    "vue-style-loader": "^4.1.0",
-    "vue-template-compiler": "^2.5.16",
-    "webpack": "^4.9.1",
-    "webpack-cli": "^2.1.4",
-    "webpack-dev-server": "^3.1.4",
-    "webpack-strip-block": "^0.2.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+    "name": "cookie_A",
+    "version": "0.1.0",
+    "type": "section",
+    "private": true,
+    "scripts": {
+        "build": "webpack --config webpack.config.js -p --env=build",
+        "serve": "webpack-dev-server -d --inline --env=dev",
+        "upload": "weweb-upload"
+    },
+    "dependencies": {
+        "vue": "^2.5.16"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^3.0.5",
+        "@vue/cli-plugin-eslint": "^3.0.5",
+        "@vue/cli-service": "^3.0.5",
+        "babel-loader": "^7.1.4",
+        "css-loader": "^0.28.11",
+        "vue-loader": "^15.2.2",
+        "vue-style-loader": "^4.1.0",
+        "vue-template-compiler": "^2.5.16",
+        "webpack": "^4.9.1",
+        "webpack-cli": "^2.1.4",
+        "webpack-dev-server": "^3.1.4",
+        "weweb-strip-block": "^0.0.2"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 8"
+    ]
 }
