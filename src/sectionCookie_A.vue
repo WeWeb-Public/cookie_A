@@ -64,6 +64,7 @@ export default {
   left: 0;
   right: 0;
   text-align: center;
+  pointer-events: none;
 }
 
 .cookie_A .cookie-msg-container {
@@ -80,6 +81,7 @@ export default {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  pointer-events: all;
 }
 
 .cookie_A .content-container {
