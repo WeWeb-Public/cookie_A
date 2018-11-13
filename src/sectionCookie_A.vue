@@ -3,11 +3,11 @@
 
         <div v-if="!isCookieAgreed" class="cookie-msg-container">
             <div class="content-container">
-                <wwObject v-bind:ww-object="section.data.content" v-bind:section="section" v-bind:ww-object-types-allowed="['ww-text']" v-bind:ww-default-object-type="ww-text"></wwObject>
+                <wwObject v-bind:ww-object="section.data.content" v-bind:ww-object-types-allowed="['ww-text']" v-bind:ww-default-object-type="ww-text"></wwObject>
             </div>
 
             <div class="close-container" v-on:click="closeCookie()">
-                <wwObject v-bind:ww-object="section.data.close" v-bind:section="section" v-bind:ww-object-types-allowed="['ww-icon', 'ww-button', 'ww-image']" v-bind:ww-default-object-type="ww-icon"></wwObject>
+                <wwObject v-bind:ww-object="section.data.close" v-bind:ww-object-types-allowed="['ww-icon', 'ww-button', 'ww-image']" v-bind:ww-default-object-type="ww-icon"></wwObject>
             </div>
         </div>
 
@@ -18,10 +18,11 @@
 export default {
     name: "cookie_A",
     props: {
-        section: Object
+        sectionCtrl: Object
     },
     data() {
         return {
+            section: this.sectionCtrl.get(),
             isCookieAgreed: false
         }
     },
