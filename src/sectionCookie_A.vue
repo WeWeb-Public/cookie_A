@@ -22,16 +22,17 @@ export default {
     },
     data() {
         return {
-            section: this.sectionCtrl.get(),
             isCookieAgreed: false
         }
     },
     computed: {
+        section() {
+            return this.sectionCtrl.get();
+        }
     },
     methods: {
-        init: function (section) {
+        init: function () {
             this.isCookieAgreed = this.$cookies.get('is-cookies-agreed') || false;
-            this.section.data.buttons = this.section.data.buttons || [];
         },
         closeCookie: function () {
             // Remove cookie
