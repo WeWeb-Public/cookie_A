@@ -2,12 +2,14 @@
     <div class="cookie_A floating-button-container">
 
         <div v-if="!isCookieAgreed" class="cookie-msg-container">
+            <wwObject v-bind:ww-object="section.data.background" class="background" ww-category="background"></wwObject>
+
             <div class="content-container">
-                <wwObject v-bind:ww-object="section.data.content" v-bind:ww-object-types-allowed="['ww-text']" v-bind:ww-default-object-type="ww-text"></wwObject>
+                <wwObject v-bind:ww-object="section.data.content" v-bind:ww-object-types-allowed="['ww-text']" ww-default-object-type="ww-text"></wwObject>
             </div>
 
             <div class="close-container" v-on:click="closeCookie()">
-                <wwObject v-bind:ww-object="section.data.close" v-bind:ww-object-types-allowed="['ww-icon', 'ww-button', 'ww-image']" v-bind:ww-default-object-type="ww-icon"></wwObject>
+                <wwObject v-bind:ww-object="section.data.close" v-bind:ww-object-types-allowed="['ww-icon', 'ww-button', 'ww-image']" ww-default-object-type="ww-icon"></wwObject>
             </div>
         </div>
 
@@ -31,6 +33,49 @@ export default {
         }
     },
     methods: {
+        initData() {
+            //Init objects
+            let needUpdate = false;
+
+            if (!this.section.data.background) {
+                this.section.data.background = wwLib.wwObject.getDefault({ type: 'ww-color', data: { color: '#f6f9fce6' } });
+                needUpdate = true;
+            }
+            if (!this.section.data.content) {
+                this.section.data.content = wwLib.wwObject.getDefault({
+                    type: 'ww-text',
+                    data: {
+                        size: 1,
+                        text: {
+                            "en_GB": "By browsing this website, you <a target=\"_blank\" class=\"in-text-link\" href=\"https://www.weweb.io/cookies\">accept our cookies policy</a>",
+                            "fr_FR": "En parcourant ce site web, vous <a target=\"_blank\" class=\"in-text-link\" href=\"https://www.weweb.io/cookies\">acceptez notre polique sur les cookies</a>"
+                        },
+                        color: "#424770"
+                    },
+                });
+                needUpdate = true;
+            }
+            if (!this.section.data.close) {
+                this.section.data.close = wwLib.wwObject.getDefault({
+                    type: 'ww-icon',
+                    data: {
+                        icon: "fa fa-times",
+                        color: "#8898aa",
+                        classes: [
+                            "ww-class-img-format-round",
+                            "ww-class-icon-size-small",
+                            "ww-class-font-size-xsmall",
+                            "ww-class-btn-bg-none"
+                        ]
+                    },
+                });
+                needUpdate = true;
+            }
+
+            if (this.needUpdate) {
+                this.sectionCtrl.update(this.section);
+            }
+        },
         init: function () {
             this.isCookieAgreed = this.$cookies.get('is-cookies-agreed') || false;
         },
@@ -45,50 +90,52 @@ export default {
             this.isCookieAgreed = true;
         }
     },
-    created: function () { },
+    created: function () {
+        this.initData();
+    },
     mounted: function () {
-        this.init()
+        this.init();
     }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
 .cookie_A {
   width: 100%;
   height: auto;
-}
-
-.cookie_A.floating-button-container {
   position: fixed;
   z-index: 100;
   bottom: 10px;
   left: 0;
   right: 0;
   text-align: center;
-}
 
-.cookie_A .cookie-msg-container {
-  background: rgba(246, 249, 252, 0.9);
-  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
-    0 1px 3px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  font-size: 15px;
-  color: #424770;
-  margin: 0 auto;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
+  .cookie-msg-container {
+    position: relative;
+    background: white;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    font-size: 15px;
+    margin: 0 auto;
+    display: inline-flex;
+    align-items: center;
 
-.cookie_A .content-container {
-  padding: 8px 5px 8px 15px;
-}
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
 
-.cookie_A .close-container {
-  cursor: pointer;
+    .content-container {
+      padding: 8px 5px 8px 15px;
+    }
+
+    .close-container {
+      position: relative;
+      cursor: pointer;
+    }
+  }
 }
 </style>
