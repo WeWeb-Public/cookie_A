@@ -4,8 +4,9 @@
     "type": "section",
     "private": true,
     "scripts": {
-        "build": "webpack --config webpack.config.js -p --env=build",
-        "serve": "webpack-dev-server -d --inline --env=dev",
+        "build": "webpack --config webpack.build.config.js -p --env=build",
+        "serve-manager": "webpack-dev-server --config webpack.manager.config.js -d --inline --env=dev --hot --https --disableHostCheck=true --client-log-level=error",
+        "serve-front": "webpack-dev-server --config webpack.front.config.js -d --inline --env=dev --hot --https --disableHostCheck=true --client-log-level=error",
         "upload": "weweb-upload"
     },
     "dependencies": {
