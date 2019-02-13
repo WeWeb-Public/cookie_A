@@ -18,7 +18,7 @@
 
 <script>
 export default {
-    name: "cookie_A",
+    name: "__COMPONENT_NAME__",
     props: {
         sectionCtrl: Object
     },

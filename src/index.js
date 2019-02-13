@@ -1,10 +1,15 @@
 import section from './sectionCookie_A.vue'
 
-const name = "cookie_A";
+const name = "__NAME__";
+const version = '__VERSION__';
 
 const addComponent = function () {
     if (window.vm) {
-        window.vm.addComponent(name, section);
+        window.vm.addComponent({
+            name: name,
+            version: version,
+            content: section
+        });
 
         return true;
     }
