@@ -1,7 +1,9 @@
 <template>
     <div class="cookie_A floating-button-container">
-
         <div v-if="!isCookieAgreed" class="cookie-msg-container">
+            <!-- wwManager:start -->
+            <wwSectionEditMenu size="small" :sectionCtrl="sectionCtrl"></wwSectionEditMenu>
+            <!-- wwManager:end -->
             <wwObject v-bind:ww-object="section.data.background" class="background" ww-category="background"></wwObject>
 
             <div class="content-container">
@@ -12,7 +14,6 @@
                 <wwObject v-bind:ww-object="section.data.close" v-bind:ww-object-types-allowed="['ww-icon', 'ww-button', 'ww-image']" ww-default-object-type="ww-icon"></wwObject>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -44,30 +45,12 @@ export default {
             if (!this.section.data.content) {
                 this.section.data.content = wwLib.wwObject.getDefault({
                     type: 'ww-text',
-                    data: {
-                        size: 1,
-                        text: {
-                            "en_GB": "By browsing this website, you <a target=\"_blank\" class=\"in-text-link\" href=\"https://www.weweb.io/cookies\">accept our cookies policy</a>",
-                            "fr_FR": "En parcourant ce site web, vous <a target=\"_blank\" class=\"in-text-link\" href=\"https://www.weweb.io/cookies\">acceptez notre polique sur les cookies</a>"
-                        },
-                        color: "#424770"
-                    },
                 });
                 needUpdate = true;
             }
             if (!this.section.data.close) {
                 this.section.data.close = wwLib.wwObject.getDefault({
                     type: 'ww-icon',
-                    data: {
-                        icon: "fa fa-times",
-                        color: "#8898aa",
-                        classes: [
-                            "ww-class-img-format-round",
-                            "ww-class-icon-size-small",
-                            "ww-class-font-size-xsmall",
-                            "ww-class-btn-bg-none"
-                        ]
-                    },
                 });
                 needUpdate = true;
             }
@@ -102,40 +85,41 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .cookie_A {
-  width: 100%;
-  height: auto;
-  position: fixed;
-  z-index: 100;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  text-align: center;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: 100;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
 
-  .cookie-msg-container {
-    position: relative;
-    background: white;
-    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-    font-size: 15px;
-    margin: 0 auto;
-    display: inline-flex;
-    align-items: center;
+    .cookie-msg-container {
+        position: relative;
+        background: white;
+        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
+            0 1px 3px rgba(0, 0, 0, 0.08);
+        font-size: 15px;
+        margin: 0 auto;
+        display: inline-flex;
+        align-items: center;
 
-    .background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .content-container {
+            padding: 8px 5px 8px 15px;
+        }
+
+        .close-container {
+            position: relative;
+            cursor: pointer;
+        }
     }
-
-    .content-container {
-      padding: 8px 5px 8px 15px;
-    }
-
-    .close-container {
-      position: relative;
-      cursor: pointer;
-    }
-  }
 }
 </style>
