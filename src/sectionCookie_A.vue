@@ -4,14 +4,14 @@
             <!-- wwManager:start -->
             <wwSectionEditMenu size="small" :sectionCtrl="sectionCtrl"></wwSectionEditMenu>
             <!-- wwManager:end -->
-            <wwObject v-bind:ww-object="section.data.background" class="background" ww-category="background"></wwObject>
+            <wwObject :ww-object="section.data.background" class="background" ww-category="background"></wwObject>
 
             <div class="content-container">
-                <wwObject v-bind:ww-object="section.data.content" v-bind:ww-object-types-allowed="['ww-text']" ww-default-object-type="ww-text"></wwObject>
+                <wwObject :ww-object="section.data.content" :ww-object-types-allowed="['ww-text']" ww-default-object-type="ww-text"></wwObject>
             </div>
 
-            <div class="close-container" v-on:click="closeCookie()">
-                <wwObject v-bind:ww-object="section.data.close" v-bind:ww-object-types-allowed="['ww-icon', 'ww-button', 'ww-image']" ww-default-object-type="ww-icon"></wwObject>
+            <div class="close-container" @click="closeCookie()">
+                <wwObject :ww-object="section.data.close" :ww-object-types-allowed="['ww-icon', 'ww-button', 'ww-image']" ww-default-object-type="ww-icon"></wwObject>
             </div>
         </div>
     </div>
@@ -37,7 +37,6 @@ export default {
         initData() {
             //Init objects
             let needUpdate = false;
-
             if (!this.section.data.background) {
                 this.section.data.background = wwLib.wwObject.getDefault({ type: 'ww-color', data: { color: '#f6f9fce6' } });
                 needUpdate = true;
@@ -55,14 +54,14 @@ export default {
                 needUpdate = true;
             }
 
-            if (this.needUpdate) {
+            if (needUpdate) {
                 this.sectionCtrl.update(this.section);
             }
         },
-        init: function () {
+        init() {
             this.isCookieAgreed = this.$cookies.get('is-cookies-agreed') || false;
         },
-        closeCookie: function () {
+        closeCookie() {
             // Remove cookie
             this.$cookies.remove('is-cookies-agreed');
 
@@ -73,10 +72,10 @@ export default {
             this.isCookieAgreed = true;
         }
     },
-    created: function () {
+    created() {
         this.initData();
     },
-    mounted: function () {
+    mounted() {
         this.init();
     }
 };

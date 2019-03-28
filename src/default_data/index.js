@@ -1,11 +1,11 @@
 module.exports = [
     {
-        name: 'my_section',
+        name: 'cookie',
         storeName: {
-            en: "My first section"
+            en: "Cookie policy overlay"
         },
         storeDesc: {
-            en: "Template for my first section"
+            en: "Cookie policy overlay"
         }
     }
 ]

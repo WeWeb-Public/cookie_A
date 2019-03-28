@@ -1,3 +1,150 @@
 {
-    "name": "template"
+    "name": "template",
+    "background": {
+        "uniqueId": 9571021493,
+        "wwVersion": 3,
+        "content": {
+            "type": "ww-color",
+            "data": {
+                "backgroundColor": "transparent",
+                "style": {
+                    "borderRadius": 0,
+                    "borderWidth": 0,
+                    "borderColor": null,
+                    "borderStyle": null,
+                    "boxShadow": {
+                        "x": 0,
+                        "y": 0,
+                        "b": 0,
+                        "s": 0,
+                        "c": ""
+                    }
+                },
+                "color": "#f6f9fce6"
+            }
+        },
+        "link": {
+            "type": "none",
+            "data": {}
+        },
+        "ratio": -1,
+        "paddings": {
+            "xs": {
+                "top": 0,
+                "left": 0,
+                "right": 0,
+                "bottom": 0
+            },
+            "md": {
+                "top": 0,
+                "left": 0,
+                "right": 0,
+                "bottom": 0
+            }
+        },
+        "hidden": false,
+        "tags": [],
+        "children": {},
+        "data": {},
+        "anim": {},
+        "new": false
+    },
+    "content": {
+        "uniqueId": 3627613173,
+        "wwVersion": 3,
+        "content": {
+            "type": "ww-text",
+            "data": {
+                "text": {
+                    "fr": "Nouveau texte",
+                    "en": "By visiting this website, you accept our cookie policy."
+                },
+                "tag": "div",
+                "align": "",
+                "font": "",
+                "size": "",
+                "color": "",
+                "classes": [],
+                "children": []
+            }
+        },
+        "link": {
+            "type": "none",
+            "data": {}
+        },
+        "ratio": -1,
+        "paddings": {
+            "xs": {
+                "top": 0,
+                "left": 0,
+                "right": 0,
+                "bottom": 0
+            },
+            "md": {
+                "top": 0,
+                "left": 0,
+                "right": 0,
+                "bottom": 0
+            }
+        },
+        "hidden": false,
+        "tags": [],
+        "children": {},
+        "data": {},
+        "anim": {},
+        "new": false
+    },
+    "close": {
+        "uniqueId": 7982359257,
+        "wwVersion": 3,
+        "content": {
+            "type": "ww-icon",
+            "data": {
+                "icon": "wwi wwi-cross",
+                "style": {
+                    "color": "#808080",
+                    "backgroundColor": "#FFFFFF00",
+                    "gradient": {},
+                    "borderRadius": 50,
+                    "borderWidth": 1,
+                    "borderColor": "#808080",
+                    "borderStyle": "none",
+                    "boxShadow": {
+                        "x": 0,
+                        "y": 0,
+                        "b": 0,
+                        "s": 0,
+                        "c": ""
+                    },
+                    "size": 20,
+                    "fontSize": 20
+                }
+            }
+        },
+        "link": {
+            "type": "none",
+            "data": {}
+        },
+        "ratio": -1,
+        "paddings": {
+            "xs": {
+                "top": 0,
+                "left": 0,
+                "right": 0,
+                "bottom": 0
+            },
+            "md": {
+                "top": 0,
+                "left": 0,
+                "right": 10,
+                "bottom": 0
+            }
+        },
+        "hidden": false,
+        "tags": [],
+        "children": {},
+        "data": {},
+        "anim": {},
+        "new": false
+    }
 }

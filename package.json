@@ -1,6 +1,6 @@
 {
     "name": "cookie_A",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "type": "section",
     "wewebPublic": "true",
     "repository": {
@@ -10,8 +10,7 @@
     "private": true,
     "scripts": {
         "build": "weweb-build",
-        "serve-manager": "weweb-serve-manager",
-        "serve-front": "weweb-serve-front",
+        "serve": "weweb-serve",
         "upload": "weweb-upload"
     },
     "dependencies": {
@@ -39,7 +38,7 @@
         "webpack": "^4.9.1",
         "webpack-cli": "^2.1.4",
         "webpack-dev-server": "^3.1.14",
-        "weweb-client": "^1.0.20"
+        "weweb-client": "^1.0.30"
     },
     "browserslist": [
         "> 1%",
