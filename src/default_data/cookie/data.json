@@ -1,150 +1,150 @@
 {
     "name": "template",
-    "background": {
-        "uniqueId": 9571021493,
-        "wwVersion": 3,
-        "content": {
-            "type": "ww-color",
-            "data": {
-                "backgroundColor": "transparent",
-                "style": {
-                    "borderRadius": 0,
-                    "borderWidth": 0,
-                    "borderColor": null,
-                    "borderStyle": null,
-                    "boxShadow": {
-                        "x": 0,
-                        "y": 0,
-                        "b": 0,
-                        "s": 0,
-                        "c": ""
-                    }
-                },
-                "color": "#f6f9fce6"
-            }
-        },
-        "link": {
-            "type": "none",
-            "data": {}
-        },
-        "ratio": -1,
-        "paddings": {
-            "xs": {
-                "top": 0,
-                "left": 0,
-                "right": 0,
-                "bottom": 0
-            },
-            "md": {
-                "top": 0,
-                "left": 0,
-                "right": 0,
-                "bottom": 0
-            }
-        },
-        "hidden": false,
-        "tags": [],
-        "children": {},
-        "data": {},
-        "anim": {},
-        "new": false
-    },
-    "content": {
-        "uniqueId": 3627613173,
-        "wwVersion": 3,
-        "content": {
-            "type": "ww-text",
-            "data": {
-                "text": {
-                    "fr": "Nouveau texte",
-                    "en": "By visiting this website, you accept our cookie policy."
-                },
-                "tag": "div",
-                "align": "",
-                "font": "",
-                "size": "",
-                "color": "",
-                "classes": [],
-                "children": []
-            }
-        },
-        "link": {
-            "type": "none",
-            "data": {}
-        },
-        "ratio": -1,
-        "paddings": {
-            "xs": {
-                "top": 0,
-                "left": 0,
-                "right": 0,
-                "bottom": 0
-            },
-            "md": {
-                "top": 0,
-                "left": 0,
-                "right": 0,
-                "bottom": 0
-            }
-        },
-        "hidden": false,
-        "tags": [],
-        "children": {},
-        "data": {},
-        "anim": {},
-        "new": false
-    },
     "close": {
-        "uniqueId": 7982359257,
-        "wwVersion": 3,
+        "new": false,
+        "anim": {},
+        "data": {},
+        "link": {
+            "data": {},
+            "type": "none"
+        },
+        "tags": [],
+        "ratio": -1,
+        "hidden": false,
         "content": {
-            "type": "ww-icon",
             "data": {
                 "icon": "wwi wwi-cross",
                 "style": {
+                    "size": 20,
                     "color": "#808080",
-                    "backgroundColor": "#FFFFFF00",
+                    "fontSize": 20,
                     "gradient": {},
-                    "borderRadius": 50,
-                    "borderWidth": 1,
+                    "boxShadow": {
+                        "b": 0,
+                        "c": "",
+                        "s": 0,
+                        "x": 0,
+                        "y": 0
+                    },
                     "borderColor": "#808080",
                     "borderStyle": "none",
-                    "boxShadow": {
-                        "x": 0,
-                        "y": 0,
-                        "b": 0,
-                        "s": 0,
-                        "c": ""
-                    },
-                    "size": 20,
-                    "fontSize": 20
+                    "borderWidth": 1,
+                    "borderRadius": 50,
+                    "backgroundColor": "#FFFFFF00"
                 }
-            }
-        },
-        "link": {
-            "type": "none",
-            "data": {}
-        },
-        "ratio": -1,
-        "paddings": {
-            "xs": {
-                "top": 0,
-                "left": 0,
-                "right": 0,
-                "bottom": 0
             },
+            "type": "ww-icon"
+        },
+        "children": {},
+        "paddings": {
             "md": {
                 "top": 0,
                 "left": 0,
                 "right": 10,
                 "bottom": 0
+            },
+            "xs": {
+                "top": 0,
+                "left": 0,
+                "right": 0,
+                "bottom": 0
             }
         },
-        "hidden": false,
-        "tags": [],
-        "children": {},
-        "data": {},
+        "uniqueId": 7613498684,
+        "wwVersion": 3
+    },
+    "content": {
+        "new": false,
         "anim": {},
-        "new": false
+        "data": {},
+        "link": {
+            "data": {},
+            "type": "none"
+        },
+        "tags": [],
+        "ratio": -1,
+        "hidden": false,
+        "content": {
+            "data": {
+                "tag": "div",
+                "font": "",
+                "size": "",
+                "text": {
+                    "en": "By visiting this website, you accept our cookie policy.",
+                    "fr": "<font color=\"#404040\">En visitant ce site web, vous acceptez notre politique sur l'utilisation des cookies</font>"
+                },
+                "align": "",
+                "color": "",
+                "classes": [],
+                "children": []
+            },
+            "type": "ww-text"
+        },
+        "children": {},
+        "paddings": {
+            "md": {
+                "top": 0,
+                "left": 0,
+                "right": 0,
+                "bottom": 0
+            },
+            "xs": {
+                "top": 0,
+                "left": 0,
+                "right": 0,
+                "bottom": 0
+            }
+        },
+        "uniqueId": 13860152143,
+        "wwVersion": 3
+    },
+    "background": {
+        "new": false,
+        "anim": {},
+        "data": {},
+        "link": {
+            "data": {},
+            "type": "none"
+        },
+        "tags": [],
+        "ratio": -1,
+        "hidden": false,
+        "content": {
+            "data": {
+                "color": "#f6f9fce6",
+                "style": {
+                    "boxShadow": {
+                        "x": 0,
+                        "y": 2,
+                        "b": 5,
+                        "s": 0,
+                        "c": "rgba(50, 50, 50, 0.75)"
+                    },
+                    "borderColor": "#FFFFFF",
+                    "borderStyle": "solid",
+                    "borderWidth": 1,
+                    "borderRadius": 1
+                },
+                "backgroundColor": "transparent"
+            },
+            "type": "ww-color"
+        },
+        "children": {},
+        "paddings": {
+            "md": {
+                "top": 0,
+                "left": 0,
+                "right": 0,
+                "bottom": 0
+            },
+            "xs": {
+                "top": 0,
+                "left": 0,
+                "right": 0,
+                "bottom": 0
+            }
+        },
+        "uniqueId": 3938606026,
+        "wwVersion": 3
     }
 }
