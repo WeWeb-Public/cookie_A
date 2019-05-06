@@ -96,10 +96,8 @@ export default {
     .cookie-msg-container {
         position: relative;
         background: white;
-        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
-            0 1px 3px rgba(0, 0, 0, 0.08);
         font-size: 15px;
-        margin: 0 auto;
+        margin: 10px;
         display: inline-flex;
         align-items: center;
 
