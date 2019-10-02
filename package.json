@@ -1,48 +1,27 @@
 {
-    "name": "cookie_A",
-    "version": "0.1.4",
-    "type": "section",
-    "wewebPublic": "true",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/WeWeb-Public/cookie_A"
-    },
-    "private": true,
-    "scripts": {
-        "build": "weweb-build",
-        "serve": "weweb-serve",
-        "upload": "weweb-upload"
-    },
-    "dependencies": {
-        "vue": "^2.5.16"
-    },
-    "devDependencies": {
-        "@vue/cli-plugin-babel": "^3.0.5",
-        "@vue/cli-plugin-eslint": "^3.0.5",
-        "@vue/cli-service": "^3.0.5",
-        "autoprefixer": "^9.3.1",
-        "axios": "^0.18.0",
-        "babel-loader": "^7.1.4",
-        "babel-plugin-transform-async-to-generator": "^6.24.1",
-        "cache-loader": "^1.2.5",
-        "css-loader": "^1.0.1",
-        "node-sass": "^4.10.0",
-        "postcss": "^7.0.6",
-        "sass-loader": "^7.1.0",
-        "shelljs": "^0.8.3",
-        "string-replace-loader": "^2.1.1",
-        "url-loader": "^1.1.2",
-        "vue-loader": "^15.2.2",
-        "vue-style-loader": "^4.1.0",
-        "vue-template-compiler": "^2.5.16",
-        "webpack": "^4.9.1",
-        "webpack-cli": "^2.1.4",
-        "webpack-dev-server": "^3.1.14",
-        "weweb-client": "^1.0.33"
-    },
-    "browserslist": [
-        "> 1%",
-        "last 2 versions",
-        "not ie <= 8"
-    ]
+  "name": "cookie_A",
+  "version": "0.1.5",
+  "type": "section",
+  "wewebPublic": "true",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WeWeb-Public/cookie_A"
+  },
+  "private": true,
+  "scripts": {
+    "build": "weweb-build",
+    "serve": "weweb-serve",
+    "upload": "weweb-upload"
+  },
+  "dependencies": {
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "weweb-client": "^1.0.47"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }
