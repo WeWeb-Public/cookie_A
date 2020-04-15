@@ -1,4 +1,4 @@
-{
+latest{
 	"name": "cookie_A",
 	"version": "0.1.6",
 	"type": "section",
@@ -17,7 +17,7 @@
 		"vue": "^2.6.11"
 	},
 	"devDependencies": {
-		"weweb-client": "^1.1.3"
+		"weweb-client": "latest"
 	},
 	"browserslist": [
 		"> 1%",
